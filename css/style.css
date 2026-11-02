@@ -1,0 +1,421 @@
+
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+    --navy: #142d50;
+    --blue: #37699b;
+    --sky: #d9e9f7;
+    --ice: #f2f7fc;
+    --white: #fff;
+    --ink: #20354d;
+    --muted: #61748a;
+    --line: #c9dbea;
+    --radius: 18px;
+}
+
+/* =========================
+   GENERAL STYLES
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--ink);
+    background: var(--ice);
+    line-height: 1.65;
+}
+
+a {
+    color: inherit;
+}
+
+a:focus-visible {
+    outline: 3px solid var(--blue);
+    outline-offset: 4px;
+}
+
+.container {
+    width: min(1120px, calc(100% - 40px));
+    margin: auto;
+}
+
+/* =========================
+   HEADER AND NAVIGATION
+========================= */
+
+.site-header {
+    background: var(--white);
+    border-bottom: 1px solid var(--line);
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 18px 0;
+}
+
+.brand {
+    font-size: 1.25rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: var(--navy);
+}
+
+.site-nav {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.site-nav a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.94rem;
+}
+
+.site-nav a:hover,
+.text-link:hover {
+    color: var(--blue);
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+main {
+    padding: 52px 0 72px;
+}
+
+.eyebrow {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 800;
+    color: var(--blue);
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+    color: var(--navy);
+}
+
+h1 {
+    font-size: clamp(2.3rem, 5vw, 4.3rem);
+    margin: 12px 0 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 0 0 12px;
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin: 12px 0;
+}
+
+.lead {
+    font-size: 1.1rem;
+    color: var(--muted);
+    max-width: 650px;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero-grid,
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+.spotlight {
+    background: var(--navy);
+    color: white;
+    border-radius: var(--radius);
+    padding: clamp(30px, 5vw, 62px);
+}
+
+.spotlight h1,
+.spotlight .eyebrow {
+    color: white;
+}
+
+.spotlight p {
+    color: #d9e9f7;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar,
+.card,
+.article-body,
+.metadata {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 28px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sidebar ul {
+    padding-left: 20px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 9px;
+    background: var(--blue);
+    color: white;
+    padding: 12px 20px;
+    font-weight: 700;
+    margin-top: 12px;
+}
+
+.button:hover {
+    background: var(--navy);
+}
+
+.button.light {
+    background: white;
+    color: var(--navy);
+}
+
+/* =========================
+   SECTION HEADINGS
+========================= */
+
+.section-heading {
+    margin: 56px 0 22px;
+}
+
+/* =========================
+   CARDS AND GALLERY
+========================= */
+
+.cards-gallery {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(280px, 1fr)
+    );
+    gap: 22px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0;
+}
+
+.card-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card p {
+    color: var(--muted);
+}
+
+.card .button {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+/* =========================
+   CARD ARTWORK
+========================= */
+
+.art {
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+}
+
+.art-one {
+    background: #c9dff1;
+    color: #173a65;
+}
+
+.art-two {
+    background: #386d9f;
+    color: white;
+}
+
+.art-three {
+    background: #e2eef8;
+    color: #3b658d;
+}
+
+/* =========================
+   DETAIL PAGES
+========================= */
+
+.detail-hero {
+    margin-bottom: 30px;
+}
+
+.content-grid {
+    gap: 24px;
+}
+
+.article-body section + section {
+    margin-top: 34px;
+}
+
+.feature-visual {
+    min-height: 260px;
+    border-radius: 14px;
+    background: #d6e8f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--navy);
+    font-size: 2.5rem;
+    font-weight: 800;
+    padding: 24px;
+    margin: 24px 0;
+}
+
+/* =========================
+   PROJECT METADATA
+========================= */
+
+.metadata dl {
+    margin: 0;
+}
+
+.metadata dt {
+    font-weight: 800;
+    color: var(--navy);
+    margin-top: 18px;
+}
+
+.metadata dd {
+    margin: 3px 0 0;
+    color: var(--muted);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer {
+    background: var(--navy);
+    color: white;
+}
+
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 24px 0;
+}
+
+.footer-inner a {
+    color: white;
+}
+
+.footer-links {
+    display: flex;
+    gap: 18px;
+}
+
+/* =========================
+   UTILITY CLASSES
+========================= */
+
+.muted {
+    color: var(--muted);
+}
+
+/* =========================
+   TABLET AND DESKTOP
+========================= */
+
+@media (min-width: 768px) {
+
+    .hero-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .content-grid {
+        grid-template-columns: 3fr 1fr;
+    }
+
+}
+
+/* =========================
+   MOBILE DEVICES
+========================= */
+
+@media (max-width: 767px) {
+
+    main {
+        padding: 30px 0 48px;
+    }
+
+    .header-inner {
+        align-items: flex-start;
+    }
+
+    .site-nav {
+        gap: 14px;
+    }
+
+    .spotlight {
+        padding: 30px;
+    }
+
+    .sidebar,
+    .article-body,
+    .metadata {
+        padding: 22px;
+    }
+
+    .section-heading {
+        margin-top: 40px;
+    }
+
+}
